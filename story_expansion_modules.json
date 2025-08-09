@@ -1,0 +1,90 @@
+{
+    "companions": [
+        {
+            "id": "companion_001",
+            "name": "엘렌",
+            "class": "힐러",
+            "origin": "Eden",
+            "skills": [
+                "치유",
+                "버프"
+            ],
+            "recruitment_condition": {
+                "location": "scene_find_party",
+                "required_flags": [
+                    "visited_eden"
+                ]
+            }
+        },
+        {
+            "id": "companion_002",
+            "name": "카일",
+            "class": "전사",
+            "origin": "Yugen",
+            "skills": [
+                "강타",
+                "방패막기"
+            ],
+            "recruitment_condition": {
+                "location": "scene_find_party",
+                "required_stats": {
+                    "STR": 60
+                }
+            }
+        }
+    ],
+    "skills": [
+        {
+            "name": "고속이동",
+            "type": "이동기",
+            "effect": "맵 간 빠른 전이",
+            "unlock_condition": {
+                "level": 5,
+                "location": "scene_stronger"
+            }
+        },
+        {
+            "name": "어둠속성 마법",
+            "type": "공격기",
+            "effect": "어둠 속성의 강력한 마법 공격",
+            "unlock_condition": {
+                "level": 10,
+                "location": "scene_stronger"
+            }
+        }
+    ],
+    "episodes": [
+        {
+            "episode_id": "ep001_yugen_forest",
+            "title": "유겐령의 혼령 숲",
+            "region": "Yugen",
+            "summary": "숲속의 혼령과 조우. 음양사 동료 모집 가능.",
+            "requires": {
+                "visited_yugen": true,
+                "has_item": [
+                    "혼령부적"
+                ]
+            },
+            "outcomes": [
+                "동료 획득",
+                "고대 마법 조각 발견"
+            ]
+        },
+        {
+            "episode_id": "ep002_eden_ruins",
+            "title": "에덴의 고대 유적",
+            "region": "Eden",
+            "summary": "고대 유적에서 신비한 힘을 얻을 수 있다.",
+            "requires": {
+                "visited_eden": true,
+                "has_skill": [
+                    "고속이동"
+                ]
+            },
+            "outcomes": [
+                "스킬 획득",
+                "동료와의 유대 강화"
+            ]
+        }
+    ]
+}

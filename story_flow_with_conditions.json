@@ -1,0 +1,156 @@
+[
+    {
+        "scene_id": "scene_god_meeting",
+        "description": "신과의 만남. 신이 당신에게 새로운 삶을 제안한다.",
+        "choice": [
+            {
+                "text": "수락한다",
+                "next": "scene_choose_stats"
+            },
+            {
+                "text": "거절한다",
+                "ending": "ending_refuse"
+            }
+        ]
+    },
+    {
+        "scene_id": "scene_choose_stats",
+        "description": "신이 능력치와 스킬을 선택하라고 한다.",
+        "choice": [
+            {
+                "text": "힘을 선택",
+                "next": "scene_descend"
+            },
+            {
+                "text": "마법을 선택",
+                "next": "scene_descend"
+            },
+            {
+                "text": "운을 선택",
+                "next": "scene_descend"
+            }
+        ]
+    },
+    {
+        "scene_id": "scene_descend",
+        "description": "이세계에 내려온 당신. 마을로 갈지, 혼자 사냥할지 선택한다.",
+        "choice": [
+            {
+                "text": "마을로 간다",
+                "next": "scene_town"
+            },
+            {
+                "text": "혼자 사냥한다",
+                "next": "scene_hunt"
+            }
+        ]
+    },
+    {
+        "scene_id": "scene_town",
+        "description": "마을에 도착. 모험가 길드에 등록할 수 있다.",
+        "choice": [
+            {
+                "text": "모험가 등록",
+                "next": "scene_rankup"
+            },
+            {
+                "text": "마을 구경",
+                "next": "scene_explore_town"
+            }
+        ]
+    },
+    {
+        "scene_id": "scene_rankup",
+        "description": "모험가 랭크업에 도전한다.",
+        "choice": [
+            {
+                "text": "랭크업 성공",
+                "next": "scene_find_party",
+                "conditions": {
+                    "required_stats": {
+                        "STR": 50,
+                        "INT": 30
+                    }
+                }
+            },
+            {
+                "text": "랭크업 실패",
+                "next": "scene_train",
+                "conditions": {
+                    "required_stats": {
+                        "STR": {
+                            "$lt": 50
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "scene_id": "scene_find_party",
+        "description": "동료를 모집할 수 있다.",
+        "choice": [
+            {
+                "text": "동료 모집",
+                "next": "scene_stronger",
+                "conditions": {
+                    "required_flags": [
+                        "joined_guild"
+                    ]
+                }
+            },
+            {
+                "text": "혼자 모험",
+                "next": "scene_stronger"
+            }
+        ]
+    },
+    {
+        "scene_id": "scene_stronger",
+        "description": "강해진 당신. 마왕에게 갈지, 다른 마을로 여행할지 선택한다.",
+        "choice": [
+            {
+                "text": "마왕 토벌",
+                "next": "scene_demon_lord",
+                "conditions": {
+                    "required_stats": {
+                        "STR": 100
+                    },
+                    "required_party_size": 3,
+                    "has_skill": [
+                        "어둠속성 마법"
+                    ]
+                }
+            },
+            {
+                "text": "다른 마을로 여행",
+                "next": "scene_travel"
+            }
+        ]
+    },
+    {
+        "scene_id": "scene_demon_lord",
+        "description": "마왕과의 결전.",
+        "choice": [
+            {
+                "text": "마왕 토벌 성공",
+                "ending": "ending_hero",
+                "conditions": {
+                    "required_stats": {
+                        "STR": 200
+                    },
+                    "required_party_size": 3
+                }
+            },
+            {
+                "text": "마왕 토벌 실패",
+                "ending": "ending_bad"
+            }
+        ]
+    },
+    {
+        "scene_id": "scene_travel",
+        "description": "여러 마을을 여행하며 평화로운 삶을 산다.",
+        "ending": "ending_peace"
+    }
+]

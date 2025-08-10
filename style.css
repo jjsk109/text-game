@@ -13,6 +13,9 @@ body {
     box-shadow: 0 6px 24px #000a;
     padding: 40px 32px 32px 32px;
   }
+  .blur{
+    filter: blur(4px);
+  }
   #scene-id {
     color: #aaa;
     font-size: 0.95em;
@@ -62,3 +65,57 @@ body {
   @media (max-width: 700px) {
     #game-container { padding: 18px 4vw; }
   }
+
+
+
+#stage { 
+  position: fixed;
+  top: 5vh;  
+  left: calc(50vw + 400px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel {
+  position: relative; 
+  inset: 0;
+  padding: 12px 16px;
+  opacity: 0; transform: translateY(10px);
+  pointer-events: none;
+}
+.panel.is-active { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+.grid { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+.grid button {
+  padding: 10px; border: 1px solid #ddd; border-radius: 10px; background: #fff;
+  cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.grid button:hover { transform: translateY(-2px); transition: transform .2s; }
+
+/* 애니메이션 키프레임 */
+@keyframes fadeInUp   { from {opacity:0; transform:translateY(10px)} to {opacity:1; transform:translateY(0)} }
+@keyframes fadeOutUp  { from {opacity:1; transform:translateY(0)} to {opacity:0; transform:translateY(-10px)} }
+@keyframes fadeInLeft { from {opacity:0; transform:translateX(20px)} to {opacity:1; transform:translateX(0)} }
+@keyframes fadeOutRight{from {opacity:1; transform:translateX(0)} to {opacity:0; transform:translateX(20px)} }
+
+/* 유틸 클래스 */
+.anim-in   { animation: fadeInUp .28s ease forwards; }
+.anim-out  { animation: fadeOutUp .24s ease forwards; }
+
+/* 모션 민감 사용자 배려 */
+@media (prefers-reduced-motion: reduce) {
+  .anim-in, .anim-out { animation: none; transition: none; }
+}
+
+.none{
+  display: none !important;
+}
+
+#country-panel{
+  background: #2d2d3a;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px #000a;
+  padding: 40px 32px 32px 32px;
+}

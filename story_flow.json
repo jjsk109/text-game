@@ -232,7 +232,21 @@
                 "next": "scene_town"
             },
             {
-                "text": "혼자 사냥한다",
+                "text": "사냥한다",
+                "next": "scene_hunt"
+            }
+        ]
+    },
+    {
+        "scene_id": "scene_hunt",
+        "description": "사냥에 성공했습니다. 마을로 갈지, 혼자 사냥할지 선택한다.",
+        "choice": [
+            {
+                "text": "마을로 간다",
+                "next": "scene_town"
+            },
+            {
+                "text": "사냥한다",
                 "next": "scene_hunt"
             }
         ]

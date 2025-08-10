@@ -1,3 +1,5 @@
+import { moveCountry } from "./contry.js";
+
 let story = [];
 let currentScene = null;
 let flags = {};
@@ -6,9 +8,20 @@ let party = [];
 
 let openAIKey = "";
 
+const noneDisplayContry = [
+    "scene_god_meeting",
+    "intro_0",
+    "intro_1",
+    "intro_2",
+    "scene_choose_stats",
+    "scene_choose_skill"
+];
+
+
 async function loadStory() {
     const res = await fetch('story_flow.json');
     story = await res.json();
+
     startGame();
 }
 
@@ -27,6 +40,7 @@ function goToScene(sceneId) {
         document.getElementById('scene-id').innerText = '';
         document.getElementById('scene-desc').innerText = '에러: 해당 장면을 찾을 수 없습니다.';
         document.getElementById('choices').innerHTML = '';
+        document.getElementById('restart-btn').style.display = 'block';
         return;
     }
     document.getElementById('scene-id').innerText = `[${currentScene.scene_id}]`;
@@ -60,6 +74,11 @@ function goToScene(sceneId) {
                 }
                 console.log(ch);
 
+                if (!noneDisplayContry.includes(ch.next)) {
+                    void moveCountry();
+                    document.querySelector("#stage").classList.toggle('none')
+                }
+
                 // next가 있으면 무조건 해당 scene_id로 이동
                 if (ch.next) {
                     console.log(ch);
@@ -71,6 +90,7 @@ function goToScene(sceneId) {
                 if (ch.ending) {
                     showEnding(ch.ending);
                 }
+
             };
             document.getElementById('choices').appendChild(btn);
         });
@@ -94,7 +114,6 @@ function showEnding(ending) {
     document.getElementById('restart-btn').style.display = 'block';
 }
 
-const 
 
 document.getElementById('restart-btn').onclick = startGame;
 loadStory();

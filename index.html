@@ -12,7 +12,21 @@
     <div id="choices"></div>
     <div id="ending"></div>
     <button id="restart-btn" style="display:none;">처음부터 다시</button>
+
   </div>
+<!-- 화면 컨테이너 -->
+<div id="stage" class="none">
+  <div id="country-panel" class="panel is-active">
+    <h3>나라를 선택하세요</h3>
+    <div id="country-list" class="grid"></div>
+  </div>
+
+  <div id="history-panel" class="panel">
+    <h3>선택 히스토리</h3>
+    <ul id="history-list"></ul>
+    <button id="back-btn" type="button">← 다음 나라 선택하기</button>
+  </div>
+</div>
   <script type="module" src="main.js?ver=0.1.1"></script>
 </body>
 </html>

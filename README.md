@@ -8,5 +8,5 @@ TODO :
 4. AI 자동 스토리
 
 
--[] : Code migration 
+
 

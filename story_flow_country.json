@@ -1,0 +1,32 @@
+[
+    {
+        "name": "아리안트령",
+        "commnet": "시작의 마을",
+        "image": "./image/gonfalon/ariant.png"
+    },
+    {
+        "name": "마왕령",
+        "commnet": "마왕의 성, 악의 나라",
+        "image": "./image/gonfalon/mawang.png"
+    },
+    {
+        "name": "에덴",
+        "commnet": "신의 나라, 종교 국가",
+        "image": "./image/gonfalon/eden.png"
+    },
+    {
+        "name": "아스테르 왕국",
+        "commnet": "마법 국가",
+        "image": "./image/gonfalon/aster.png"
+    },
+    {
+        "name": "무간대지",
+        "commnet": "종말의 잿더미, 괴물의 서식지",
+        "image": "./image/gonfalon/mugan.png"
+    },
+    {
+        "name": "유겐령",
+        "commnet": "검과 혼령의 나라",
+        "image": "./image/gonfalon/yugen.png"
+    }
+]

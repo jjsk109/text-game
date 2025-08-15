@@ -58,7 +58,35 @@ const dom = {
  *  ========================= */
 function safeSetText(el, text = "") {
     if (!el) return;
+
     el.innerText = text;
+
+    // TTS (Text-to-Speech) 실행
+    if ('speechSynthesis' in window) {
+        console.log(text);
+        const voices = speechSynthesis.getVoices();
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = "ko-KR";  // 한국어
+        utterance.rate = 1;      // 말 속도 (0.1 ~ 10, 기본값 1)
+        utterance.pitch = 0.2;   // 높낮이 (0 ~ 2)
+        // 남자 목소리 우선 선택 (이름에 'Male', '남성', 'man' 들어간 경우)
+        const maleVoice = voices.find(v =>
+            v.lang.startsWith("ko") && (
+                v.name.toLowerCase().includes("male") ||
+                v.name.includes("남성") ||
+                v.name.toLowerCase().includes("man")
+            )
+        );
+
+        if (maleVoice) {
+            utterance.voice = maleVoice;
+        }
+        speechSynthesis.cancel(); // 이전 음성 중단
+        speechSynthesis.speak(utterance);
+    } else {
+        console.warn("TTS 지원 안됨");
+    }
 }
 
 function clearChoices() {
@@ -128,7 +156,7 @@ function goToScene(sceneId) {
 
     GameState.currentScene = nextScene;
 
-    safeSetText(dom.sceneId, `[${nextScene.scene_id}]`);
+    // safeSetText(dom.sceneId, `[${nextScene.scene_id}]`);
     safeSetText(dom.sceneDesc, nextScene.description || "");
     clearChoices();
 

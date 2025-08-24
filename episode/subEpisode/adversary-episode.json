@@ -1,0 +1,97 @@
+[
+    {
+        "scene_id": "dark_village_arrival",
+        "description": "주인공이 이세계 마을 입구에 도착한다. 그러나 마을 사람들은 갑자기 두려움에 떨며 웅성거린다.",
+        "choice": [
+            {
+                "text": "무슨 일이죠?",
+                "next": "villagers_fear"
+            }
+        ]
+    },
+    {
+        "scene_id": "villagers_fear",
+        "description": "촌장: 제발 우리 마을을 떠나 주십시오… 마왕이시여!!",
+        "choice": [
+            {
+                "text": "나? 마왕이라고? (당황하며 마을을 떠난다)",
+                "next": "outside_village"
+            }
+        ]
+    },
+    {
+        "scene_id": "outside_village",
+        "description": "마을을 떠난 주인공. 그런데 이상하다. 짐승도, 몬스터도 모두 두려움에 떨며 달아난다.",
+        "choice": [
+            {
+                "text": "왜 이러는 거지?",
+                "next": "black_dragon_appears"
+            }
+        ]
+    },
+    {
+        "scene_id": "black_dragon_appears",
+        "description": "강대한 존재가 나타난다. 흑염룡, 과거의 전(前) 마왕이었다.\n\n흑염룡: '이세계에서 온 자여… 그대는 누구냐?'",
+        "choice": [
+            {
+                "text": "나는 그냥 인간인데? 왜 다들 나를 무서워하지?",
+                "next": "dragon_reveals_truth"
+            }
+        ]
+    },
+    {
+        "scene_id": "dragon_reveals_truth",
+        "description": "흑염룡: '이 세계에는 이미 마왕이 있다. 그런데 또 다른 어둠이 나타나다니… 설마… 그대가 진정한 마왕인가?'",
+        "choice": [
+            {
+                "text": "…아 맞다, 나 스킬에서 '마왕'을 선택했었지. 그렇다면, 마왕에게 데려다 줘.",
+                "next": "go_to_maou_castle"
+            }
+        ]
+    },
+    {
+        "scene_id": "go_to_maou_castle",
+        "description": "흑염룡이 주인공을 등에 태우고 마왕성으로 향한다.\n현재 마왕이 당황스러운 표정으로 주인공을 맞이한다.",
+        "choice": [
+            {
+                "text": "마왕: '이분은… 나보다 더 존귀한 어둠이시다…!'",
+                "next": "maou_bows"
+            }
+        ]
+    },
+    {
+        "scene_id": "maou_bows",
+        "description": "현 마왕은 무릎을 꿇으며 떨고 있다.\n마왕: '진정한 마왕이 있다면… 당신이 아니고서는 누구란 말입니까! 주인이시여!'",
+        "choice": [
+            {
+                "text": "아니… 나는 그냥… (당황)",
+                "next": "throne_scene"
+            }
+        ]
+    },
+    {
+        "scene_id": "throne_scene",
+        "description": "주인공은 억지로 마왕의 왕좌에 앉게 된다.\n그 순간, '마왕' 스킬과 '어둠속성 마법', '몬스터 소환'이 폭발적으로 발현한다.",
+        "choice": [
+            {
+                "text": "어둠이… 세계를 잠식한다.",
+                "next": "darkness_spreads"
+            }
+        ]
+    },
+    {
+        "scene_id": "darkness_spreads",
+        "description": "왕좌에 앉은 순간, 주인공의 존재가 어둠과 동기화된다.\n괴물들이 기뻐하며 울부짖고, 인간들은 절망에 빠진다.\n세계는 빠르게 흑암으로 물들어간다.",
+        "choice": [
+            {
+                "text": "이제 시대는 끝났다…",
+                "next": "ending_apocalypse"
+            }
+        ]
+    },
+    {
+        "scene_id": "ending_apocalypse",
+        "description": "【엔딩: 종말】\n주인공은 진정한 마왕으로 등극한다.\n인간의 시대는 막을 내리고, 몬스터와 어둠의 세계가 시작된다.",
+        "ending": true
+    }
+]

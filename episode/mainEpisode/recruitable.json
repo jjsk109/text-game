@@ -1,0 +1,176 @@
+{
+    "factions": [
+        {
+            "name": "신계",
+            "characters": [
+                {
+                    "name": "신(이세계)",
+                    "role": "신",
+                    "recruitable": false,
+                    "affinity": 20,
+                    "comment": "주인공을 이세계로 보낸 절대적 존재"
+                }
+            ]
+        },
+        {
+            "name": "마왕령",
+            "characters": [
+                {
+                    "name": "마왕",
+                    "role": "최종보스",
+                    "recruitable": false,
+                    "affinity": -20,
+                    "comment": "세계의 어둠을 지배하는 존재"
+                },
+                {
+                    "name": "흑염룡(부마왕)",
+                    "role": "보스",
+                    "recruitable": false,
+                    "affinity": -40,
+                    "comment": "마왕의 충실한 부하"
+                },
+                {
+                    "name": "미노타우르스",
+                    "role": "보스",
+                    "recruitable": false,
+                    "affinity": -100,
+                    "comment": "던전 지배자"
+                }
+            ]
+        },
+        {
+            "name": "에덴",
+            "characters": [
+                {
+                    "name": "에덴 신관장",
+                    "role": "지도자",
+                    "recruitable": false,
+                    "affinity": 0,
+                    "comment": "에덴 종교 국가의 신성 권위자"
+                },
+                {
+                    "name": "소크라",
+                    "role": "적대자",
+                    "recruitable": false,
+                    "affinity": -90,
+                    "comment": "주인공을 싫어하는 인물"
+                },
+                {
+                    "name": "테스",
+                    "role": "적대자",
+                    "recruitable": false,
+                    "affinity": -80,
+                    "comment": "주인공을 싫어하는 인물"
+                }
+            ]
+        },
+        {
+            "name": "아리안트령",
+            "characters": [
+                {
+                    "name": "아리안트 국왕",
+                    "role": "국왕",
+                    "recruitable": false,
+                    "affinity": 0,
+                    "comment": "풍요의 나라 아리안트령의 통치자"
+                },
+                {
+                    "name": "예리",
+                    "role": "동료",
+                    "recruitable": true,
+                    "affinity": 0,
+                    "comment": "마법을 사용하는 동료"
+                },
+                {
+                    "name": "칼빈",
+                    "role": "동료",
+                    "recruitable": true,
+                    "affinity": 0,
+                    "comment": "용맹한 전사 동료"
+                },
+                {
+                    "name": "라헬",
+                    "role": "동료/배신자",
+                    "recruitable": true,
+                    "affinity": 0,
+                    "comment": "처음엔 동료가 되지만 배신한다"
+                },
+                {
+                    "name": "편백 백작",
+                    "role": "귀족",
+                    "recruitable": false,
+                    "affinity": 0,
+                    "comment": "영지를 다스리는 귀족"
+                },
+                {
+                    "name": "백작 딸",
+                    "role": "귀족 후계자",
+                    "recruitable": false,
+                    "affinity": 0,
+                    "comment": "편백 백작의 외동딸"
+                },
+                {
+                    "name": "유리스",
+                    "role": "NPC",
+                    "recruitable": false,
+                    "affinity": 0,
+                    "comment": "이벤트 캐릭터 (자유 설정)"
+                },
+                {
+                    "name": "시작 마을 촌장",
+                    "role": "촌장",
+                    "recruitable": false,
+                    "affinity": 0,
+                    "comment": "플레이어를 처음 맞이하는 촌장"
+                },
+                {
+                    "name": "필라맨",
+                    "role": "대장장이",
+                    "recruitable": true,
+                    "affinity": 0,
+                    "comment": "무기 제작 가능한 동료 후보"
+                },
+                {
+                    "name": "슈타인",
+                    "role": "대장장이 보조",
+                    "recruitable": true,
+                    "affinity": 0,
+                    "comment": "필라맨의 제자, 동료 가능"
+                }
+            ]
+        },
+        {
+            "name": "유겐령",
+            "characters": [
+                {
+                    "name": "유겐령 촌장",
+                    "role": "촌장",
+                    "recruitable": false,
+                    "affinity": 10,
+                    "comment": "유겐령 지역의 촌장"
+                },
+                {
+                    "name": "나우도",
+                    "role": "검사",
+                    "recruitable": false,
+                    "affinity": 10,
+                    "comment": "검을 쓰는 전사"
+                },
+                {
+                    "name": "주옴",
+                    "role": "궁수",
+                    "affinity": 10,
+                    "recruitable": false,
+                    "comment": "명사수"
+                },
+                {
+                    "name": "이수신",
+                    "role": "전사",
+                    "affinity": 10,
+                    "recruitable": false,
+                    "comment": "명군, 기사도"
+                }
+            ]
+        }
+    ]
+}

@@ -268,12 +268,12 @@ function renderChoices(scene) {
                 setStageHidden(true);
             }
 
-            // eopsode가 들어가 있는지 확인 
-            // eopsode가 있을 경우 story 추가 하고 다시 실행 
+            // episode가 들어가 있는지 확인 
+            // episode가 있을 경우 story 추가 하고 다시 실행 
             // --- (여기 추가) 서브 에피소드 적용 ---
             // 선택지에 episode(오타 ‘eopsode’)가 설정되어 있으면 적용
             const episodeKey =
-                ch.eopsode ? ch.eopsode : null;
+                ch.episode ? ch.episode : null;
 
             if (episodeKey) {
                 try {

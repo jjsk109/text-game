@@ -192,7 +192,7 @@
             {
                 "text": "마왕",
                 "next": "dark_village_arrival",
-                "eopsode": "adversary-episode"
+                "episode": "adversary-episode"
             },
             {
                 "text": "천사",
